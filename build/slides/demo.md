@@ -1,23 +1,86 @@
-<!-- .slide: data-state="title" -->
+<!-- .slide: data-state="title" class="bg-dark text-warning" -->
 
-# RayVeal
+# CRUD API
 
-## Opinionated Reveal.js
+## w/Express.js, Mongo and JWT
 
-A markdown first presentation framework. Based on reveal.js with preinstalled plugins, a dash of Bootstrap and sweet extras.
+</br>
 
-<a class="btn btn-lg btn-info text-white mr-3" href="https://github.com/planetoftheweb/rayveal">Github Repo</a>
+_By: Francesco Silvetti_
 
-<div class="small mt-4"><span class="badge badge-light mr-1 ml-2">&larr; &rarr;</span> navigate
-<span class="badge badge-light mr-1 ml-2">t</span>toolbar
-<span class="badge badge-light mr-1 ml-2">m</span>menu
-<span class="badge badge-light mr-1 ml-2">esc</span>overview</div>
+---
+
+<!-- .slide: data-state="textonvideo" data-background-video="images/f.mp4" -->
+
+# ¿Arto de frameworks muy _overkill_ para un prototipo y de todo los contratiempos que eso trae?
+
+---
+
+<!-- .slide: data-state="textonvideo" data-background-video="images/hellyeah.mp4" -->
+
+# Solucion
+#### Crear un backend con Express.js, Mongo y JWT
 
 ---
 
 <!-- .slide: data-state="title" class="bg-dark text-warning" -->
 
-# Features
+# Tecnologias
+
+---
+
+<!-- .slide: data-state="title" class="bg-dark text-warning" -->
+
+# <i class="fab fa-node-js"></i> Node.js
+
+Es un **entorno de ejecución** para **JavaScript** construido con el **motor** de JavaScript **V8** de **Chrome**.
+
+---
+
+<!-- .slide: data-state="title" class="bg-dark text-warning" -->
+
+# Express.js
+
+**Framework Web** rapido y **minimalista** para **Node.js**
+
+</br>
+
+### Permite construir
+
+- Aplicaciones Web
+- **APIs**
+
+---
+
+<!-- .slide: data-state="title" class="bg-dark text-warning" -->
+
+# <i class="fas fa-database"></i> MongoDB
+
+**Base de datos** multi-plataforma **NoSQL** orientada a documentos. Usa **documentos** con un squema __JSON__-_ish_.
+
+---
+
+<!-- .slide: data-state="title" class="bg-dark text-warning" -->
+
+# <i class="fas fa-lock"></i> JsonWebToken
+
+Es un **metodo** para **reprensentar peticiones** entre **dos partes**.
+
+---
+
+<!-- .slide: data-state="title" class="bg-dark text-warning" -->
+
+# Hello world
+
+```javascript
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+```
 
 ---
 
@@ -25,29 +88,6 @@ A markdown first presentation framework. Based on reveal.js with preinstalled pl
 
 - Assumes you use markdown to create slides. The `index.html` file points to a markdown file in `build/slides/demo.md`.
 - It does whatever [reveal.js](https://github.com/hakimel/reveal.js) can.
-
----
-
-# Persistent Navigation
-
-<small>The persistent navigation bar at the bottom is on every page. It will disappear after 5 seconds. You can also toggle it by hitting the `t` key. Look for the following code on `index.html`</small>
-
-```html
-<footer class="footer">
-  <div class="persistent">
-    <strong>Slides:</strong>
-    <a href="https://bit.ly/thenext50">bit.ly/thenext50</a> &bull;
-    <strong>Contact:</strong>
-    <a href="https://www.linkedin.com/in/planetoftheweb">LinkedIn</a> |
-    <a href="https://www.linkedin.com/learning/instructors/ray-villalobos"
-      >courses</a
-    >
-    | <a href="https://twitter.com/planetoftheweb">@planetoftheweb</a> |
-    <a href="https://github.com/planetoftheweb">github</a>
-  </div>
-  <div class="smaller">Use arrows to navigate, esc for overview</div>
-</footer>
-```
 
 ---
 
